@@ -1,0 +1,185 @@
+/* Futuristic Color Palette */
+.bg-dark-neon {
+    background: linear-gradient(135deg, #1a1a3d, #2a4066); /* Dark neon gradient */
+}
+
+.text-neon {
+    color: #00ffcc; /* Bright cyan neon */
+}
+
+.bg-purple {
+    background-color: #8a2be2; /* Neon purple for badges */
+}
+
+.btn-neon {
+    background: linear-gradient(45deg, #00ffcc, #ff007a);
+    border: none;
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 25px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-neon:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 255, 204, 0.5);
+}
+
+/* Body */
+body {
+    background: #0d0d1f; /* Deep space blue */
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+}
+
+/* Header */
+.navbar-dark .nav-link {
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.navbar-dark .nav-link:hover {
+    color: #00ffcc;
+}
+
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: 1.2rem;
+}
+
+.search-input {
+    position: absolute;
+    top: 50%;
+    left: 40px;
+    transform: translateY(-50%);
+    width: 0;
+    padding: 5px 10px;
+    border: none;
+    transition: width 0.3s ease, opacity 0.3s;
+    opacity: 0;
+}
+
+.search-input:not([hidden]) {
+    width: 200px;
+    opacity: 1;
+}
+
+/* Sidebar */
+.sidebar {
+    min-height: 100vh;
+    position: sticky;
+    top: 0;
+}
+
+.sidebar-content {
+    padding: 20px;
+}
+
+.glass-effect {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.profile-snippet img {
+    border: 2px solid #00ffcc;
+}
+
+.sidebar .nav-link {
+    padding: 12px 0;
+    color: #fff;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.sidebar .nav-link:hover {
+    color: #00ffcc;
+    transform: translateX(5px);
+}
+
+.badge {
+    font-size: 0.8rem;
+}
+
+/* Main Feed */
+.main-content {
+    padding-top: 20px;
+}
+
+.feed {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.post .card {
+    background: transparent;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.post .card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.3);
+}
+
+.post .card-img-top {
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.post .card-body {
+    padding: 15px;
+}
+
+.hover-icon {
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.hover-icon:hover {
+    color: #ff007a; /* Neon pink */
+    transform: scale(1.2);
+}
+
+/* Footer */
+footer a:hover {
+    color: #ff007a;
+}
+
+/* Animations */
+@keyframes neonGlow {
+    0% { text-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc; }
+    50% { text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc; }
+    100% { text-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc; }
+}
+
+.text-neon {
+    animation: neonGlow 2s infinite;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 767px) {
+    .sidebar {
+        min-height: auto;
+        position: relative;
+    }
+    .feed {
+        max-width: 100%;
+    }
+    .post .card-img-top {
+        height: 300px;
+    }
+    .search-input:not([hidden]) {
+        width: 150px;
+    }
+}
