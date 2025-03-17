@@ -9,3 +9,10 @@ document.getElementById('searchBtn').addEventListener('click', () => {
 document.getElementById('postBtn').addEventListener('click', () => {
     alert('Post feature coming soon.');
 });
+
+document.querySelectorAll('.fa-heart').forEach(heart => {
+    heart.addEventListener('click', () => {
+        heart.classList.toggle('far');
+        heart.classList.toggle('fas');
+    });
+});
